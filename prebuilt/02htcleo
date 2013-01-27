@@ -1,0 +1,17 @@
+#!/system/bin/sh
+
+if [ -f /cache/downloadfile.apk ]; then
+  rm -r /cache/downloadfile*.apk
+fi
+
+if [ ! -h /cache/recovery ]; then
+  # /cache/recovery is not a symbolic link
+  rm -r /cache/recovery
+  if [ -d /mnt/cache/recovery ]; then
+    ln -s /mnt/cache/recovery /cache/recovery
+  fi
+fi
+
+chown system.system /dev/cpu_dma_latency
+chmod 777 /dev/cpu_dma_latency
+
