@@ -153,6 +153,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
+# uses high-density artwork where available
+PRODUCT_LOCALES += hdpi
+
 # media profiles and capabilities spec
 $(call inherit-product, device/htc/leo/media_a1026.mk)
 
