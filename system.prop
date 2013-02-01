@@ -53,5 +53,6 @@ debug.performance.tuning=1
 video.accelerate.hw=1
 ro.telephony.call_ring.delay=0
 ro.ril.disable.power.collapse=0
+debug.sf.electron_frames=24
 persist.sys.themeId=Ice10
 persist.sys.themePackageName=com.theme.ice10

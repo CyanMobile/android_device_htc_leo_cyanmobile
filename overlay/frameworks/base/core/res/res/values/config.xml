@@ -40,10 +40,12 @@
          by light sensor events or hardware directly -->
     <bool name="config_automaticSoftwareBrightness">true</bool>
 
-    <!-- Enable the screen animation -->
-    <bool name="config_enableScreenAnimation">false</bool>
+    <bool name="config_animateScreenLights">false</bool>
 
-    <bool name="config_enableScreenOffAnimation">false</bool>
+    <!-- Enable the screen animation -->
+    <bool name="config_enableScreenAnimation">true</bool>
+
+    <bool name="config_enableScreenOffAnimation">true</bool>
 
     <bool name="config_disableMenuKeyInLockScreen">true</bool>
 

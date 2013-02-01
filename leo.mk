@@ -88,6 +88,7 @@ PRODUCT_PACKAGES += \
     SpareParts \
     Development \
     Term \
+    LeoUpdater \
     CMDroidwall \
     CMTimers \
     libOmxCore \

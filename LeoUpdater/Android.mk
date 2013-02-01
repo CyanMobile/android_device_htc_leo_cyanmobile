@@ -1,4 +1,5 @@
-# Copyright (C) 2009 The Android Open Source Project
+#
+# Copyright (C) 2008 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -11,18 +12,22 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),htcleo)
+LOCAL_PATH := $(call my-dir)
 
-LOCAL_PATH := $(my-dir)
-subdir_makefiles := \
-	$(LOCAL_PATH)/libreference-ril/Android.mk \
-	$(LOCAL_PATH)/libsensors/Android.mk \
-	$(LOCAL_PATH)/liblights/Android.mk \
-	$(LOCAL_PATH)/libgps/Android.mk \
-	$(LOCAL_PATH)/LeoUpdater/Android.mk \
-	$(LOCAL_PATH)/libhtc_ril_wrapper/Android.mk
+include $(CLEAR_VARS)
 
-include $(subdir_makefiles)
+LOCAL_MODULE_TAGS := optional
 
-endif
+LOCAL_SRC_FILES := $(call all-subdir-java-files)
+
+LOCAL_SDK_VERSION := current
+
+LOCAL_PACKAGE_NAME := LeoUpdater
+
+LOCAL_CERTIFICATE := platform
+
+include $(BUILD_PACKAGE)
+
+
